@@ -412,3 +412,6 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/ex/src/Servlet
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
 !SUBENTRY 1 org.eclipse.core.resources 4 368 2018-03-05 12:55:12.957
 !MESSAGE Resource '/ex/src/ServletInitParam.java' does not exist.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-03-05 13:34:36.870
+!MESSAGE Several ports (8005, 8181, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
