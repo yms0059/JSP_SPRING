@@ -8,22 +8,10 @@
 </head>
 <body>
 
-<%!
-	int age;
-%>
-
-<%
-	String str = request.getParameter("age");
-	age = Integer.parseInt(str);
-	
-	if( age >= 20){
-		response.sendRedirect("pass.jsp?age=" + age);
-	} else {
-		response.sendRedirect("ng.jsp?age=" + age);
-	}
-%>
-
-<%= age %>
+	<jsp:forward page="forward_param.jsp">
+		<jsp:param name="id" value="abcdef" />
+		<jsp:param name="pw" value="1234" />
+	</jsp:forward>
 
 </body>
 </html>

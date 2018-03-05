@@ -8,17 +8,7 @@
 </head>
 <body>
 
-<%!
-	int age;
-%>
+	<h1> include02.jsp 페이지 입니다. </h1>
 
-<%
-	String str = request.getParameter("age");
-	age = Integer.parseInt(str);
-%>
-
-미성년자 입니다. 주류구매가 불가능 합니다.
-
-<a href="requestex.html">처음으로 이동</a>
 </body>
 </html>

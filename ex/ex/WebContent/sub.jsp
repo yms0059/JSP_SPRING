@@ -8,22 +8,7 @@
 </head>
 <body>
 
-<%!
-	int age;
-%>
-
-<%
-	String str = request.getParameter("age");
-	age = Integer.parseInt(str);
-	
-	if( age >= 20){
-		response.sendRedirect("pass.jsp?age=" + age);
-	} else {
-		response.sendRedirect("ng.jsp?age=" + age);
-	}
-%>
-
-<%= age %>
+	<h5>sub.jsp 페이지 입니다.</h5>
 
 </body>
 </html>

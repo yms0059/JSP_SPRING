@@ -8,17 +8,18 @@
 </head>
 <body>
 
-<%!
-	int age;
-%>
+	<%!
+		String id, pw;
+	%>
 
-<%
-	String str = request.getParameter("age");
-	age = Integer.parseInt(str);
-%>
+	<%
+		id = request.getParameter("id");
+		pw = request.getParameter("pw");
+	%>
+	
+	<h1>forward_param.jsp 입니다.</h1>
+	아이디 : <%= id %><br />
+	비밀번호 : <%= pw %>
 
-성인 입니다. 주류구매가 가능 합니다.
-
-<a href="requestex.html">처음으로 이동</a>
 </body>
 </html>
