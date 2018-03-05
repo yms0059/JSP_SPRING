@@ -415,3 +415,9 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/ex/src/Servlet
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-03-05 13:34:36.870
 !MESSAGE Several ports (8005, 8181, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-05 14:38:08.379
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-05 14:38:08.390
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
