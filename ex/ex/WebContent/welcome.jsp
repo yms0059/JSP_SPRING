@@ -8,9 +8,16 @@
 </head>
 <body>
 
-	<h1>main.jsp 페이지 입니다.</h1>
+	<%
+		Cookie[] cookies = request.getCookies();
 	
-	<jsp:forward page="sub.jsp" />
-
+		for(int i=0; i<cookies.length; i++) {
+			String id = cookies[i].getValue();
+			if(id.equals("abcde")) out.println(id + "님 안녕하세요." + "<br />");
+		}
+	%>
+	
+	<a href="logout.jsp">로그아웃</a>
+	
 </body>
 </html>

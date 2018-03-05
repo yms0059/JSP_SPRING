@@ -7,8 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1> include02.jsp 페이지 입니다. </h1>
+	<%!
+		String id, pw;
+	%>
+	<%
+		id = request.getParameter("id");
+		pw = request.getParameter("pw");
+		
+		if(id.equals("abcde") && pw.equals("12345")) {
+			session.setAttribute("id", id);	
+			response.sendRedirect("welcome.jsp");
+		} else {
+			response.sendRedirect("login.html");
+		}
+	%>
 
 </body>
 </html>

@@ -7,8 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h5>sub.jsp 페이지 입니다.</h5>
-
+	
+	<%
+		Cookie[] cookies = request.getCookies();
+		
+		if(cookies != null) {
+			for(int i=0; i<cookies.length; i++) {
+				if(cookies[i].getValue().equals("abcde")){
+					cookies[i].setMaxAge(0);
+					response.addCookie(cookies[i]);
+				}
+			}
+		}
+		
+		//response.sendRedirect("login.html");
+		response.sendRedirect("cookietest.jsp");
+	%>
+	
 </body>
 </html>

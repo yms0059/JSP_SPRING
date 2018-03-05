@@ -7,10 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1> include01.jsp 페이지 입니다. </h1>
-	<jsp:include page="include02.jsp" flush="true" />
-	<h1> 다시 include01.jsp 페이지 입니다. </h1>
-
+	
+	<%
+		Cookie[] cookies = request.getCookies();
+		
+		if(cookies != null) {
+			for(int i=0; i<cookies.length; i++) {
+				if(cookies[i].getValue().equals("abcde")){
+					cookies[i].setMaxAge(0);
+					response.addCookie(cookies[i]);
+				}
+			}
+		}
+		
+		//response.sendRedirect("login.html");
+		response.sendRedirect("cookietest.jsp");
+	%>
+	
 </body>
 </html>

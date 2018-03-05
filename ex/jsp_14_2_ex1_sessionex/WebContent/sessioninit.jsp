@@ -8,10 +8,12 @@
 </head>
 <body>
 
-	<jsp:forward page="forward_param.jsp">
-		<jsp:param name="id" value="abcdef" />
-		<jsp:param name="pw" value="1234" />
-	</jsp:forward>
+	<%
+		session.setAttribute("mySessionName", "mySessionData");
+		session.setAttribute("myNum", 12345);
+	%>
+	
+	<a href="sessionget.jsp">session get</a>
 
 </body>
 </html>
