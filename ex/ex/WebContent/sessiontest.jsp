@@ -11,15 +11,20 @@
 
 	<%
 		Enumeration enumeration = session.getAttributeNames();
-		while(enumeration.hasMoreElements()){
+		int i = 0;
+		while(enumeration.hasMoreElements()) {
+			i++;
+			
 			String sName = enumeration.nextElement().toString();
 			String sValue = (String)session.getAttribute(sName);
 			
-			if(sValue.equals("abcde")) out.println(sValue + "님 안녕하세요." + "<br />");
+			out.println("sName : " + sName + "<br />");
+			out.println("sValue : " + sValue + "<br />");
 		}
+		
+		if(i == 0) out.println("해당 세션이 삭제 되었습니다.");
+		
 	%>
-	
-	<a href="logout.jsp">로그아웃</a>
-	
+
 </body>
 </html>

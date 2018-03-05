@@ -1,3 +1,4 @@
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,20 +10,17 @@
 <body>
 	
 	<%
-		Cookie[] cookies = request.getCookies();
-		
-		if(cookies != null) {
-			for(int i=0; i<cookies.length; i++) {
-				if(cookies[i].getValue().equals("abcde")){
-					cookies[i].setMaxAge(0);
-					response.addCookie(cookies[i]);
-				}
-			}
+		Enumeration enumeration = session.getAttributeNames();
+		while(enumeration.hasMoreElements()) {
+			String sName = enumeration.nextElement().toString();
+			String sValue = (String)session.getAttribute(sName);
+			
+			if(sValue.equals("abcde")) session.removeAttribute(sName);
 		}
 		
-		//response.sendRedirect("login.html");
-		response.sendRedirect("cookietest.jsp");
 	%>
+	
+	<a href="sessiontest.jsp">sessionTest</a>
 	
 </body>
 </html>
