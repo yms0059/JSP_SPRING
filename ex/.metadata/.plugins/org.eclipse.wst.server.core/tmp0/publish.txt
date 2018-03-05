@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Mon Mar 05 12:42:38 KST 2018
+#Mon Mar 05 13:14:02 KST 2018
+org.eclipse.jst.jee.server\:jsp_8_1_ex1_initparamex=C\:\\Users\\Yun Myeong Sik\\Desktop\\JAVA\\eclipse\\apache-tomcat-7.0.82\\apache-tomcat-7.0.82\\wtpwebapps\\jsp_8_1_ex1_initparamex
 org.eclipse.jst.jee.server\:ex=C\:\\Users\\Yun Myeong Sik\\Desktop\\JAVA\\eclipse\\apache-tomcat-7.0.82\\apache-tomcat-7.0.82\\wtpwebapps\\ex
