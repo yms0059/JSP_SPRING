@@ -1,3 +1,4 @@
+<%@page import="java.util.Arrays"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,7 +9,10 @@
 </head>
 <body>
 
-	<h1>HelloWorld~~~~~~~</h1>
+<%
+	int[] iArr = {10, 20, 30};
+	out.println( Arrays.toString(iArr) );
+%>
 
 </body>
 </html>
